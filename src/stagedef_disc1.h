@@ -213,7 +213,7 @@
 		//Characters
 		{Char_BF_New,     FIXED_DEC(105,1),  FIXED_DEC(100,1)},
 		{Char_XmasP_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
+		{Char_Tank_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
 		Back_Dummy_New,
@@ -228,15 +228,15 @@
 	
 	{ //StageId_5_1 (Cocoa)
 		//Characters
-		{Char_BF_New,      FIXED_DEC(90,1),   FIXED_DEC(85,1)},
-		{Char_XmasP_New, FIXED_DEC(-190,1),   FIXED_DEC(90,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
+		{Char_BF_New,   FIXED_DEC(120,1),   FIXED_DEC(40,1)},
+		{Char_Master_New, FIXED_DEC(-50,1),  FIXED_DEC(49,1)},
+		{Char_Senpai_New,       FIXED_DEC(900,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
 		Back_Week5_New,
 		
 		//Song info
-		{FIXED_DEC(13,10),FIXED_DEC(13,10),FIXED_DEC(13,10)},
+		{FIXED_DEC(13,10),FIXED_DEC(20,10),FIXED_DEC(26,10)},
 		5, 1,
 		XA_Cocoa, 0,
 		
@@ -246,7 +246,7 @@
 		//Characters
 		{Char_BF_New,      FIXED_DEC(90,1),   FIXED_DEC(85,1)},
 		{Char_XmasP_New, FIXED_DEC(-190,1),   FIXED_DEC(90,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
+		{Char_Tank_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
 		Back_Week5_New,

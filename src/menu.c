@@ -836,6 +836,7 @@ void Menu_Tick(void)
 				{StageId_3_1, "PICO"},
 				{StageId_3_2, "PHILLY NICE"},
 				{StageId_3_3, "BLAMMED"},
+				{StageId_5_1, "COURTROOM RAP"},
 				{StageId_5_3, "I THLAMMED MY PENITH"},
 			};
 			

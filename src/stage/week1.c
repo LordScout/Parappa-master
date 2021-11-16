@@ -19,7 +19,7 @@ typedef struct
 	//Textures
 	Gfx_Tex tex_back0; //Stage and back
 	Gfx_Tex tex_back1; //Curtains
-	Gfx_Tex tex_back2;
+	Gfx_Tex tex_back2; //Poster
 } Back_Week1;
 
 //Week 1 background functions

@@ -105,10 +105,10 @@ static const CharFrame char_bf_frame[] = {
 	{BF_ArcMain_BF3, {  0, 106, 95, 107}, { 51,  93}}, //14 peace 2
 	{BF_ArcMain_BF3, {96, 106, 98, 105}, { 52,  91}}, //15 peace 3
 	
-	{BF_ArcMain_BF4, {  0,   0, 128, 128}, { 48,  92}}, //16 sweat 1
-	{BF_ArcMain_BF4, {128,   0, 128, 128}, { 48,  93}}, //17 sweat 2
-	{BF_ArcMain_BF4, {  0, 128, 128, 128}, { 48,  98}}, //18 sweat 3
-	{BF_ArcMain_BF4, {128, 128, 128, 128}, { 48,  98}}, //19 sweat 4
+	{BF_ArcMain_BF4, {  0,   0,  75, 104}, { 43,  90}}, //16 sweat 1
+	{BF_ArcMain_BF4, { 76,   0,  75, 103}, { 43,  89}}, //17 sweat 2
+	{BF_ArcMain_BF4, {  0,   0,  75, 104}, { 43,  90}}, //18 sweat 1
+	{BF_ArcMain_BF4, { 76,   0,  75, 103}, { 43,  89}}, //19 sweat 2
 	
 	{BF_ArcMain_BF5, {  0,   1,  76, 107}, { 48, 92}}, //20 left miss 1
 	{BF_ArcMain_BF5, { 77,   0,  77, 108}, { 49, 93}}, //21 left miss 2
@@ -150,7 +150,7 @@ static const Animation char_bf_anim[PlayerAnim_Max] = {
 	{2, (const u8[]){ 7,  8, ASCR_BACK, 1}},             //CharAnim_Down
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},       //CharAnim_DownAlt
 	{2, (const u8[]){ 9, 10, ASCR_BACK, 1}},             //CharAnim_Up
-	{2, (const u8[]){28, 29, 30, 31, 31, 31, ASCR_BACK, 1}}, //CharAnim_UpAlt
+	{2, (const u8[]){16, 17, 18, 19, ASCR_BACK, 1}}, //CharAnim_UpAlt
 	{2, (const u8[]){11, 12, ASCR_BACK, 1}},             //CharAnim_Right
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},       //CharAnim_RightAlt
 	
@@ -206,6 +206,48 @@ void Char_BF_Tick(Character *character)
 		this->character.focus_zoom = FIXED_DEC(1, 1);
 	}
 
+	if ((stage.stage_id == StageId_5_1))
+	{
+		this->character.focus_x = FIXED_DEC(-55, 1);
+		this->character.focus_y = FIXED_DEC(-75, 1);
+		this->character.focus_zoom = FIXED_DEC(10, 10);
+	}
+
+	if ((stage.stage_id == StageId_5_1) && stage.song_step >= 296)
+	{
+		this->character.focus_x = FIXED_DEC(-55, 1);
+		this->character.focus_y = FIXED_DEC(-65, 1);
+		this->character.focus_zoom = FIXED_DEC(12, 10);
+	}
+
+	if ((stage.stage_id == StageId_5_1) && stage.song_step >= 310)
+	{
+		this->character.focus_x = FIXED_DEC(-45, 1);
+		this->character.focus_y = FIXED_DEC(-65, 1);
+		this->character.focus_zoom = FIXED_DEC(14, 10);
+	}
+
+	if ((stage.stage_id == StageId_5_1) && stage.song_step >= 316)
+	{
+		this->character.focus_x = FIXED_DEC(-38, 1);
+		this->character.focus_y = FIXED_DEC(-65, 1);
+		this->character.focus_zoom = FIXED_DEC(16, 10);
+	}
+
+	if ((stage.stage_id == StageId_5_1) && stage.song_step >= 324)
+	{
+		this->character.focus_x = FIXED_DEC(-32, 1);
+		this->character.focus_y = FIXED_DEC(-65, 1);
+		this->character.focus_zoom = FIXED_DEC(20, 10);
+	}
+
+	if ((stage.stage_id == StageId_5_1) && stage.song_step >= 328)
+	{
+		this->character.focus_x = FIXED_DEC(-55, 1);
+		this->character.focus_y = FIXED_DEC(-75, 1);
+		this->character.focus_zoom = FIXED_DEC(10, 10);
+	}
+
 	//Handle animation updates
 	if ((character->pad_held & (INPUT_LEFT | INPUT_DOWN | INPUT_UP | INPUT_RIGHT)) == 0 ||
 	    (character->animatable.anim != CharAnim_Left &&
@@ -256,6 +298,26 @@ void Char_BF_Tick(Character *character)
 					if ((stage.song_step) == 412)
 						character->set_anim(character, PlayerAnim_Peace);
 					if ((stage.song_step) == 600)
+						character->set_anim(character, PlayerAnim_Peace);
+					break;
+				case StageId_5_1: //Court Rap
+					if ((stage.song_step) == 302)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 304)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 308)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 312)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 316)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 320)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 324)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 328)
+						character->set_anim(character, CharAnim_UpAlt);
+					if ((stage.song_step) == 474)
 						character->set_anim(character, PlayerAnim_Peace);
 					break;
 				default:

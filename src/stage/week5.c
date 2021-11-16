@@ -149,24 +149,22 @@ void Back_Week5_DrawBG(StageBack *back)
 	}
 	
 	//Draw back wall
-	fx = stage.camera.x >> 3;
-	fy = stage.camera.y >> 3;
+	fx = stage.camera.x;
+	fy = stage.camera.y;
 	
 	static const struct Back_Week5_WallPiece
 	{
 		RECT src;
 		fixed_t scale;
 	} wall_piece[] = {
-		{{  0, 0, 113, 256}, FIXED_DEC(1,1)},
-		{{113, 0,   6, 256}, FIXED_DEC(17,1)},
-		{{119, 0, 137, 256}, FIXED_DEC(1,1)},
+		{{  0, 0, 256, 172}, FIXED_DEC(2,1)},
 	};
 	
 	RECT_FIXED wall_dst = {
-		FIXED_DEC(-180,1) - fx,
-		FIXED_DEC(-130,1) - fy,
+		FIXED_DEC(-210,1) - fx,
+		FIXED_DEC(-210,1) - fy,
 		0,
-		FIXED_DEC(190,1)
+		FIXED_DEC(300,1)
 	};
 	
 	RECT wall_src = {0, 255, 0, 0};
